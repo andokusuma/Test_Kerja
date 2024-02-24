@@ -1,0 +1,30 @@
+php artisan make:middleware CorsMiddleware
+php artisan make:migration create_invoice_details_view
+
+
+
+
+CATATAN
+
+Dalam pola regex /^\d+(\.\d{1,2}){0,2}$/, kelompok digitnya adalah sebagai berikut:
+
+^\d+: Pencocokan dimulai dengan satu atau lebih digit.
+
+(\.\d{1,2}){0,2}: Ini adalah kelompok yang memungkinkan adanya satu titik desimal yang diikuti oleh satu atau dua digit. Kelompok ini dapat muncul 0 hingga 2 kali, artinya dapat ada 0, 1, atau 2 titik desimal dengan digit terkait setelahnya.
+
+Mari kita lihat kelompok digit untuk setiap contoh:
+
+Untuk "10.20":
+
+Bagian pertama: "10" (ini sesuai dengan \d+).
+Bagian kedua: ".20" (ini sesuai dengan (\.\d{1,2})).
+Untuk "1.200":
+
+Bagian pertama: "1" (ini sesuai dengan \d+).
+Bagian kedua: ".200" (ini sesuai dengan (\.\d{1,2})).
+Untuk "300.100.1":
+
+Bagian pertama: "300" (ini sesuai dengan \d+).
+Bagian kedua: ".100" (ini sesuai dengan (\.\d{1,2})).
+Bagian ketiga: ".1" (ini sesuai dengan (\.\d{1,2})).
+Dengan pola ini, semua string yang Anda berikan ("10.20", "1.200", "300.100.1") akan cocok dengan pola karena memenuhi kriteria digit yang dijelaskan di atas.
