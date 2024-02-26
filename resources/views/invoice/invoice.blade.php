@@ -3,7 +3,7 @@
     @php
     @endphp
 <div class="row">
-    <di class="mt-5 p-5">
+    <div class="mt-5 p-5">
       <div class="border border-2 p-3 d-flex flex-column">
         <h3 class="d-flex justify-content-center">List Invoice</h3>
         <div class="d-flex flex-row-reverse mb-1">
@@ -63,9 +63,11 @@
             </div>
           </div>
         </div>
+        {{$invoices->withQueryString()->links()}}
       </div>
-    </di>
+    </div>
   </div>
+
 
   <div class="modal fade bs-example-modal-lg" tabindex="-1" aria-labelledby="myLargeModalLabel" style="display: none;" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -230,8 +232,7 @@
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
-</div>
-
+  </div>
 {{-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> --}}
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>

@@ -26,7 +26,7 @@ class InvoiceController extends Controller
             'invoice.delivery_date',
             'invoice.no_invoice',
         ])
-        ->get();
+        ->paginate(2);
 
         // CARA 2 MAKE VIEW
         // $invoices = InvoiceDetailsViewModel::all();        

@@ -28,3 +28,7 @@ Bagian pertama: "300" (ini sesuai dengan \d+).
 Bagian kedua: ".100" (ini sesuai dengan (\.\d{1,2})).
 Bagian ketiga: ".1" (ini sesuai dengan (\.\d{1,2})).
 Dengan pola ini, semua string yang Anda berikan ("10.20", "1.200", "300.100.1") akan cocok dengan pola karena memenuhi kriteria digit yang dijelaskan di atas.
+
+
+GITHUB
+alias graph="git log --all --decorate --oneline --graph"
